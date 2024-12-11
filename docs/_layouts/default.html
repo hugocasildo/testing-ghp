@@ -2,57 +2,18 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
-    {% seo %}
+
+{% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <style>
-      .navbar {
-        background-color: #157878;
-        padding: 10px;
-      }
-
-      .navbar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 15px;
-      }
-
-      .navbar ul li {
-        display: inline;
-      }
-
-      .navbar ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-      }
-
-      .navbar ul li a:hover {
-        text-decoration: underline;
-      }
-    </style>
     {% include head-custom.html %}
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-      <ul>
-        {% for page in site.pages %}
-          {% if page.path contains ".md" and page.url != "/" %}
-            <li><a href="{{ page.url | relative_url }}">{{ page.title | default: page.path | split: '/' | last }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
