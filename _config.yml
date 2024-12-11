@@ -1,6 +1,10 @@
-remote_theme: pages-themes/modernist@v0.2.0
-plugins:
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
+# repo color theme
+repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_trophies:
+  enabled: true
+  theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
+  theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 title: "This is a title"
 description: "This is a description"
 show_downloads: true
