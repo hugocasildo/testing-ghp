@@ -1,4 +1,4 @@
-# Begin
+# Start
 
 ## This is a first example for github pages
 
