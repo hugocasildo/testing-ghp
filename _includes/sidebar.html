@@ -1,0 +1,19 @@
+<div class="sidebar-menu">
+  <h2>Documentación</h2>
+  <ul>
+    {% assign sorted_docs = site.docs | sort: "path" %}
+    {% for doc in sorted_docs %}
+    {% assign folders = doc.path | split: '/' %}
+    {% if folders.size > 1 %}
+    <li>
+      <strong>{{ folders[1] }}</strong>
+      <ul>
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+      </ul>
+    </li>
+    {% else %}
+    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

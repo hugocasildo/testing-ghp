@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+  <!-- Navbar Superior -->
+  {% include navbar.html %}
+
+  <div class="container">
+    <!-- Sidebar Lateral -->
+    <aside class="sidebar">
+      {% include sidebar.html %}
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+</body>
+
+</html>
