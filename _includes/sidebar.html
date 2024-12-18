@@ -1,19 +1,18 @@
 <div class="sidebar-menu">
   <h2>Documentación</h2>
   <ul>
-    {% assign sorted_docs = site.docs | sort: "path" %}
-    {% for doc in sorted_docs %}
-    {% assign folders = doc.path | split: '/' %}
-    {% if folders.size > 1 %}
+    {% assign grouped_docs = site.docs | group_by: "dir" %}
+    {% for group in grouped_docs %}
     <li>
-      <strong>{{ folders[1] }}</strong>
+      <strong>{{ group.name | replace: "docs/", "" | capitalize }}</strong>
       <ul>
-        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% for doc in group.items %}
+        <li>
+          <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+        </li>
+        {% endfor %}
       </ul>
     </li>
-    {% else %}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endif %}
     {% endfor %}
   </ul>
 </div>

@@ -1,8 +1,8 @@
 ---
 title: Introducción
-layout: default
+layout: docs
 ---
 
 # Introducción
 
-Este es el primer archivo de documentación.
+Contenido del archivo 1.

@@ -1,8 +1,8 @@
 ---
-title: Subcategoría - Archivo 3
-layout: default
+title: Archivo 3
+layout: docs
 ---
 
 # Archivo 3
 
-Este archivo pertenece a una subcategoría.
+Contenido del archivo 3.
