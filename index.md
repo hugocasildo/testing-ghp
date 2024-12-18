@@ -5,4 +5,4 @@ layout: default
 
 # Bienvenido a Mi Sitio
 
-Esta es la página principal.
+Este es el inicio de tu sitio.

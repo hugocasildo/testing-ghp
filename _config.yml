@@ -1,6 +1,7 @@
 title: Mi Sitio con Jekyll
 description: Sitio con navegación lateral dinámica
-baseurl: ""
+baseurl: "" # Deja vacío si no usas un subdirectorio
+url: "https://hugocasildo.github.io"
 markdown: kramdown
 
 collections:
