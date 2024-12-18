@@ -1,18 +1,15 @@
-<div class="sidebar-menu">
-  <h2>Documentación</h2>
-  <ul>
-    {% assign grouped_docs = site.docs | group_by: "dir" %}
-    {% for group in grouped_docs %}
-    <li>
-      <strong>{{ group.name | replace: "docs/", "" | capitalize }}</strong>
-      <ul>
-        {% for doc in group.items %}
-        <li>
-          <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul>
+  {% assign grouped_docs = site.docs | group_by: "dir" %}
+  {% for group in grouped_docs %}
+  <li>
+    <strong>{{ group.name | replace: "docs/", "" | capitalize }}</strong>
+    <ul>
+      {% for doc in group.items %}
+      <li>
+        <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,9 +1,7 @@
 title: Mi Sitio con Jekyll
-description: Sitio con navegación lateral dinámica
-baseurl: "" # Deja vacío si no usas un subdirectorio
-url: "https://hugocasildo.github.io"
-markdown: kramdown
-
+description: Documentación dinámica
+baseurl: "/hugocasildo" # Nombre exacto de tu repositorio
+url: "https://hugocasildo.github.io" # Reemplaza <TU_USUARIO> con tu usuario
 collections:
   docs:
     output: true
